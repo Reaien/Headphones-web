@@ -1,2 +1,2 @@
 # Headphones-web
-a project showing a headphone as a new product
+Project showing a headphone as a new product
