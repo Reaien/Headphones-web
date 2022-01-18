@@ -1,0 +1,153 @@
+:root{ /*custom properties*/
+    --primario: #1073ba;
+    --secundario: #00DA55;
+    --gris: #3B3B3B;
+    --blanco: #FFFFFF;
+    --negro: #1f1e1e;
+    --grisClaro: #e1e1e1;
+
+    --separacion: 5rem;
+
+
+    --fuentePrincipal : 'Lato', sans-serif;
+    --fuenteSecundaria: 'Roboto', sans-serif;
+}
+
+/*normalize*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+}
+
+div a{
+
+}
+
+/*Globales*/
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    font-family: var(--fuenteSecundaria);
+    margin: calc( var(--separacion) / 2) 0; /*esto es 5rem dividido en 2 y 0 en costados margins*/
+}
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 2.6rem;
+}
+
+/*degradados*/
+.degradado-verde{
+    color: transparent; /*en el gradient se declara direccion, luego color, luego % de donde comenzar*/
+    background: linear-gradient(to right, var(--primario)  0%, var(--secundario) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*Header*/
+
+.header{
+    background-color: var(--negro);
+    padding: calc( var(--separacion) * 3) 0;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+    .contenido-header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.texto-header{
+    text-align: center;
+    padding-top: var(--separacion);
+}
+.texto-header p{
+    margin: 0;
+}
+@media (min-width: 768px) {
+    .texto-header{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.tagline-producto{
+    font-weight: 900;
+    font-size: 3rem;
+}
+.texto-header p{
+    margin: 0;
+}
+.texto-producto{
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .texto-producto{
+        font-size: 10rem;
+    }
+    .descripcion-header{
+        font-size: 1.3rem;
+    }
+}
+
+.precio-producto span{
+    font-size: 5rem;
+    font-weight: 900;
+}
+/*descripcion de audifonos*/
+
+.descripcion{
+    margin-top: var(--separacion);
+}
+@media (min-width: 768px) {
+    .descripcion{
+        display: flex;
+        gap: 2rem;
+    }  
+}
+
+.box-descripcion{
+    text-align: center;
+}
+.box-descripcion img{
+    width: 6rem;
+    margin: 0 auto;
+}
+.titulo-descripcion{
+    text-transform: uppercase;
+    color: var(--primario);
+    font-weight: 900;
+    font-size: 2rem;
+}
+.texto-descripcion{
+    font-size: 1.3rem;
+}
