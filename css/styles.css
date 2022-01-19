@@ -24,11 +24,10 @@ html{
 
 body{
     font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: inherit;
 }
 
-div a{
-
-}
 
 /*Globales*/
 
@@ -137,6 +136,7 @@ h3{
 
 .box-descripcion{
     text-align: center;
+    margin-bottom: var(--separacion);
 }
 .box-descripcion img{
     width: 6rem;
@@ -150,4 +150,52 @@ h3{
 }
 .texto-descripcion{
     font-size: 1.3rem;
+}
+
+/*sobre tech*/
+
+.sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+    background-position: right;
+    background-repeat: repeat, no-repeat; /*repetir gradient pero no imagen ya que se repite por la dimension*/
+    background-size: 100%, 110rem; /*define tamaño, se deja 100% default el gradient y , 110rem la imagen cargada*/
+}
+@media (min-width: 768px) {
+    .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+        background-repeat: repeat, no-repeat;
+    }
+}
+
+.sobre-tech-grid{
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+    row-gap: var(--separacion);
+}
+@media (min-width: 768px) {
+    .sobre-tech-grid{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: unset;
+    }
+}
+
+.texto-tech{
+    grid-row: 2 / 3;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5rem 0;
+}
+
+
+.texto-tech h2{
+    font-size: 4rem;
+}
+
+.texto-tech p{
+    font-size: 2rem;
+    line-height: 2;
 }
